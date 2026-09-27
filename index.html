@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pl">
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="Rodzina Dynak" />
+  <meta name="description" content="Portal rodziny Dynak — drzewo genealogiczne, poczta @dynak.pl i hosting dla rodziny." />
   <title>dynak.pl - portal rodziny Dynak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" />
@@ -16,7 +17,7 @@
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Przełącz nawigację</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -26,11 +27,11 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#home">Start</a></li>
           <li><a href="#about">O stronie</a></li>
           <li><a href="#services">Serwisy</a></li>
           <li><a href="#information">Informacje</a></li>
-          <li><a href="#google_map">Kontakt</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
     </div>
@@ -43,12 +44,12 @@
       <a href="#about" class="btn btn-default btn-lg">dalej</a>
     </div>
   </div>
- 
+
   <div id="about" class="pad-section">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <img src="images/logo.png" alt="" />
+          <img src="images/logo.png" alt="Logo rodziny Dynak" />
         </div>
         <div class="col-sm-6 text-center">
           <h2>Poznaj niezwykłe możliwości portalu dynak.pl!</h2>
@@ -57,27 +58,27 @@
       </div>
     </div>
   </div>
- 
+
   <div id="services" class="pad-section">
     <div class="container">
       <h2 class="text-center">Nasze serwisy</h2> <hr />
       <div class="row text-center">
         <div class="col-sm-3 col-xs-6">
-          <a href="http://webtrees.dynak.pl" style="color:white">
+          <a href="https://webtrees.dynak.pl" style="color:white" target="_blank" rel="noopener noreferrer">
             <i class="glyphicon glyphicon-tree-deciduous"> </i>
             <h4>Drzewo genealogiczne</h4>
           </a>
           <p>Genealogia rodziny Dynak jest rozwijana dzięki nowoczesnemu serwisowi 'webtrees'. Poznaj swoją historię już dziś!</p>
         </div>
         <div class="col-sm-3 col-xs-6">
-          <a href="https://ssl0.ovh.net/roundcube/" style="color:white">
+          <a href="https://ssl0.ovh.net/roundcube/" style="color:white" target="_blank" rel="noopener noreferrer">
             <i class="glyphicon glyphicon-envelope"> </i>
             <h4>Email</h4>
           </a>
           <p>Nie ma dla Ciebie adresu email, który brzmiałby bardziej profesjonalnie niż twoje_imie@dynak.pl. Uzyskasz go tylko tutaj.</p>
         </div>
         <div class="col-sm-3 col-xs-6">
-          <a href="http://hosting.dynak.pl" style="color:white">
+          <a href="https://hosting.dynak.pl" style="color:white" target="_blank" rel="noopener noreferrer">
             <i class="glyphicon glyphicon-hdd"> </i>
             <h4>Hosting</h4>
           </a>
@@ -86,14 +87,14 @@
         <div class="col-sm-3 col-xs-6">
           <a href="mailto:cezdyn@gmail.com" style="color:white">
             <i class="glyphicon glyphicon-user"> </i>
-            <h4>Wiecej</h4>
+            <h4>Więcej</h4>
           </a>
           <p>Współczesne technologie internetowe stwarzają nieograniczone możliwości. Skontaktuj się z nami i wspólnie zrealizujemy Twój wyjątkowy pomysł.</p>
         </div>
       </div>
     </div>
   </div>
- 
+
   <div id="information" class="pad-section">
     <div class="container">
       <div class="row">
@@ -103,7 +104,7 @@
               <h2 class="panel-title">Wykorzystujemy technologie</h2>
             </div>
             <div class="panel-body lead">
-              Tutaj na dynak.pl wykorzystujemy najnowsze technologie internetowe dla jak najszybszego i jak najpełniejszego realizowania naszych planów. Ciagla dostepność do naszego portalu zapewnia hosting od <a href="https://www.ovh.com/">OVH</a>. Interfejs webowy email to otwarty projekt <a href="https://roundcube.net/">Roundcube</a>. Drzewo genealogiczne powstaje dzieki otwartemu projektowi <a href="https://www.webtrees.net">webtrees</a> wykorzystującemu MySQL i PHP.
+              Tutaj na dynak.pl wykorzystujemy najnowsze technologie internetowe dla jak najszybszego i jak najpełniejszego realizowania naszych planów. Ciągła dostępność do naszego portalu zapewnia hosting od <a href="https://www.ovh.com/" target="_blank" rel="noopener noreferrer">OVH</a>. Interfejs webowy email to otwarty projekt <a href="https://roundcube.net/" target="_blank" rel="noopener noreferrer">Roundcube</a>. Drzewo genealogiczne powstaje dzięki otwartemu projektowi <a href="https://www.webtrees.net" target="_blank" rel="noopener noreferrer">webtrees</a> wykorzystującemu MySQL i PHP.
             </div>
           </div>
         </div>
@@ -113,38 +114,44 @@
               <h2 class="panel-title">Tworzymy technologie</h2>
             </div>
             <div class="panel-body lead">
-              Żeby w pełni rozumieć wykorzystywane technologie trzeba je współtworzy. Korzystając z projektów o otwartym kodzie źródłowym, dzielimy się uwagami i poprawkami jakie udaje nam się wprowadzić. Naszym celem jest utworzenie nowej generacji portali rodzinnych, czym mamy zamiar podzielic się ze światem. Już teraz śledź rozwój nowoczesnych technologii na dynak.pl.
+              Żeby w pełni rozumieć wykorzystywane technologie trzeba je współtworzyć. Korzystając z projektów o otwartym kodzie źródłowym, dzielimy się uwagami i poprawkami jakie udaje nam się wprowadzić. Naszym celem jest utworzenie nowej generacji portali rodzinnych, czym mamy zamiar podzielić się ze światem. Już teraz śledź rozwój nowoczesnych technologii na dynak.pl.
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
-  <div id="services" class="pad-section">
+
+  <div id="kontakt" class="pad-section">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
           <h3>Szlakami historii</h3>
           <h4>Mapa przodków rodziny Dynak/Deynak</h4>
+          <p class="lead">Źródło — to tutaj żył nasz najstarszy znany przodek, Bazyli Deynak.<br>Bliżów, Polska</p>
         </div>
       </div>
     </div>
   </div>
- 
-  <div id="google_map"></div>
- 
+
+  <div id="google_map" class="map-embed">
+    <iframe
+      title="Mapa: Bliżów — miejsce życia Bazylego Deynaka"
+      src="https://maps.google.com/maps?q=50.6025134,23.1217477&amp;z=15&amp;output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+
   <footer>
     <hr />
     <div class="container">
-      <p class="text-right">Copyright &copy; Rodzina Dynak 2015</p>
+      <p class="text-right">Copyright &copy; Rodzina Dynak 2015–2026</p>
     </div>
   </footer>
- 
+
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="//maps.google.com/maps/api/js?sensor=true"></script>
-  <script src="js/main.js"></script>
 
 </body>
 </html>

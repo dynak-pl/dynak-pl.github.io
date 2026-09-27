@@ -49,7 +49,8 @@ html, body {
 #about {
 }
 
-#services {
+#services,
+#kontakt {
   background-color: #306d9f;
   color: #ffffff;
 }
@@ -80,8 +81,15 @@ html, body {
   opacity: 0.85;
 }
 
-#google_map {
+#google_map,
+.map-embed {
   height: 500px;
+}
+.map-embed iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 footer {
