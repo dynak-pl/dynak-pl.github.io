@@ -54,16 +54,23 @@ html, body {
   background-color: #306d9f;
   color: #ffffff;
 }
-#services .glyphicon {
+#services .service-icon {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
   width: 140px;
+}
+#services .service-icon svg {
+  width: 56px;
+  height: 56px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 #information {
@@ -94,11 +101,4 @@ html, body {
 
 footer {
   padding: 20px 0;
-}
-footer .glyphicon {
-  color: #333333;
-  font-size: 60px;
-}
-footer .glyphicon:hover {
-  color: #306d9f;
 }
