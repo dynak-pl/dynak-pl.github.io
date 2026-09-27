@@ -1,107 +1,393 @@
-﻿/* ============================================================================================== 
+﻿/* ==============================================================================================
 This copyright notice must be kept untouched in the stylesheet at all times.
-The original version of this stylesheet and the associated (x)html 
+The original version of this stylesheet and the associated (x)html
 is available at http://www.script-tutorials.com/bootstrap-one-page-template-with-parallax-effect/
 Copyright (c) Script Tutorials. All rights reserved.
 This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
 ================================================================================================= */
 
-/* general styles */
-html, body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   height: 100%;
-  width: 100%;
+  scroll-behavior: smooth;
 }
 
-/* clear fixed Bootstrap navbar */
 body {
+  margin: 0;
+  min-height: 100%;
   padding-top: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background: #fff;
 }
 
-/* padded section */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  margin: 0.67em 0;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+
+p {
+  margin: 0 0 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text-center { text-align: center; }
+
+.lead {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .lead { font-size: 21px; }
+}
+
+/* header / nav */
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  height: 50px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.brand {
+  color: #777;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.brand:hover,
+.brand:focus {
+  color: #5e5e5e;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 34px;
+  padding: 9px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background: #888;
+  border-radius: 1px;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: block;
+  padding: 15px;
+  color: #777;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #333;
+  background: #e7e7e7;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .nav-toggle { display: block; }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .site-nav.is-open { display: block; }
+
+  .site-nav ul {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    padding: 10px 15px;
+  }
+}
+
+/* layout helpers */
 .pad-section {
   padding: 50px 0;
   scroll-margin-top: 60px;
 }
+
 .pad-section img {
   width: 100%;
 }
 
-/* vertical-centered text */
-.text-vcenter {
+.split {
+  display: grid;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* home */
+.home {
+  display: table;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background: url(../images/home.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.home-inner {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-.text-vcenter h1 {
-  font-size: 4.5em;
-  font-weight: 700;
+
+.home-inner h1 {
   margin: 0;
   padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
 }
 
-/* additional sections */
-#home {
-  background: url(../images/home.jpg) no-repeat center center fixed; 
-  display: table;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.home-tagline {
+  margin: 10px 0 20px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-#about {
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.333;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
+.btn:hover,
+.btn:focus {
+  color: #333;
+  background: #e6e6e6;
+  border-color: #adadad;
+  text-decoration: none;
+}
+
+/* services */
 #services,
 #kontakt {
   background-color: #306d9f;
-  color: #ffffff;
+  color: #fff;
 }
-#services .glyphicon {
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
-  height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
-  width: 140px;
-  margin-bottom: 10px;
+
+#services a {
+  color: #fff;
+  text-decoration: none;
 }
-#services a:hover .glyphicon {
+
+#services a:hover,
+#services a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+#services a:hover .service-icon {
   background: rgba(255, 255, 255, 0.12);
 }
 
-#information {
-  background: url(../images/estate.jpg) no-repeat center center fixed; 
-  display: table;
-  height: 800px;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-#information .panel {
-  opacity: 0.85;
+.section-rule {
+  border-top-color: rgba(255, 255, 255, 0.35);
 }
 
-#google_map,
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.service h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.service-icon svg {
+  width: 56px;
+  height: 56px;
+  fill: currentColor;
+}
+
+/* information panels */
+.information {
+  display: table;
+  width: 100%;
+  height: 800px;
+  background: url(../images/estate.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.information .container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.information .split {
+  align-items: stretch;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.panel-title {
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.panel-body {
+  padding: 15px;
+  color: #333;
+}
+
+.panel-body a {
+  color: #337ab7;
+}
+
+.subhead {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* map */
 .map-embed {
   height: 500px;
 }
+
 .map-embed iframe {
-  border: 0;
   display: block;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-footer {
+/* footer */
+.site-footer {
   padding: 20px 0;
+}
+
+.site-footer hr {
+  display: none;
+}
+
+.footer-copy {
+  margin: 0;
+  text-align: right;
+  color: #777;
 }
